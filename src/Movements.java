@@ -23,11 +23,11 @@ public class Movements {
 
 		output += String.format("; square - clockwise, div %s\n", div);
 
-		output += Gcodes.move_xy(0,						0);
-		output += Gcodes.move_xy(0,						machine.Y_LEN / div);
-		output += Gcodes.move_xy(machine.X_LEN / div,	machine.Y_LEN / div);
-		output += Gcodes.move_xy(machine.X_LEN / div,	0);
-		output += Gcodes.move_xy(0,						0);
+		output += Gcodes.move_xy(0, 0);
+		output += Gcodes.move_xy(0, machine.Y_LEN / div);
+		output += Gcodes.move_xy(machine.X_LEN / div, machine.Y_LEN / div);
+		output += Gcodes.move_xy(machine.X_LEN / div, 0);
+		output += Gcodes.move_xy(0, 0);
 
 		return output;
 	}
