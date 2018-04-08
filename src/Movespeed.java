@@ -1,15 +1,14 @@
 import java.io.PrintWriter;
 
 public class Movespeed {
-	final static String file = "test.gcode";
-
 	public static void main(String[] args) throws Exception {
-		String output = "";
-		output += Processes.test_proc_1(Machine.PRUSA_I3_MK3);
-
-		// Create and write file
+		writeFile("test_circles_i3.gcode", Processes.test_circles(Machine.PRUSA_I3_MK3));
+		writeFile("test_squares_crosses_i3.gcode", Processes.test_squares_crosses(Machine.PRUSA_I3_MK3));
+	}
+	
+	public static void writeFile(String file, String contents) throws Exception {
 		PrintWriter writer = new PrintWriter(file, "UTF-8");
-		writer.println(output);
+		writer.println(contents);
 		writer.close();
 		System.out.println("wrote " + file);
 	}
