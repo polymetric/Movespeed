@@ -15,11 +15,11 @@ public class Gcodes {
 	public static String move_z(float z) {
 		return String.format("G1 Z%s\n", z);
 	}
-	
+
 	public static String move_arc_ccw(float i, float j) {
 		return String.format("G3 I%s J%s\n", i, j);
 	}
-	
+
 	public static String move_arc_cw(float i, float j) {
 		return String.format("G2 I%s J%s\n", i, j);
 	}
