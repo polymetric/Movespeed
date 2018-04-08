@@ -1,5 +1,5 @@
 
-public class SpeedTest {
+public class Movespeed {
 	
 	final static String file = "test.gcode";
 	
